@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đóng góp dữ liệu | Aniot</title>
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="stylesheet" href="assets/css/pages/contribute.css">
+  </head>
+  <body data-page="contribute">
+    <div id="site-header"></div>
+
+    <main>
+      <section class="contribute-hero">
+        <div class="container-xl">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-8">
+              <span class="badge aniot-badge mb-3">Prototype trình diễn</span>
+              <p class="section-kicker">Đóng góp dữ liệu</p>
+              <h1 class="contribute-title">Mô phỏng đóng góp bộ dữ liệu mà không thay đổi hệ thống nguồn</h1>
+              <p class="contribute-description">Ngân hàng hoặc tổ chức tài chính có thể mô tả bộ dữ liệu, cấu trúc trường, ánh xạ sang chuẩn chung và chọn chính sách truy cập trước khi Aniot quản trị dữ liệu cho nghiên cứu.</p>
+            </div>
+            <div class="col-lg-4">
+              <aside class="aniot-card stewardship-card" aria-labelledby="stewardship-title">
+                <h2 id="stewardship-title">Đơn vị quản trị dữ liệu</h2>
+                <p>Aniot xây dựng và vận hành hạ tầng nền tảng với vai trò đơn vị quản trị dữ liệu, không mặc định là chủ sở hữu của mọi bộ dữ liệu được đóng góp.</p>
+                <p>Quyền sở hữu và quyền sử dụng dữ liệu phụ thuộc vào chính sách truy cập và thỏa thuận với đơn vị đóng góp dữ liệu.</p>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-section contribution-workspace" aria-labelledby="wizard-title">
+        <div class="container-xl">
+          <div class="section-heading mb-4">
+            <p class="section-kicker">Quy trình mô phỏng</p>
+            <h2 id="wizard-title" class="section-title">Chuẩn hóa trước, chia sẻ sau</h2>
+            <p class="section-description">Biểu mẫu này chỉ chạy cục bộ trong trình duyệt. Không có tệp thật được tải lên và không có API nào được gọi.</p>
+          </div>
+
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-3">
+              <ol id="wizard-stepper" class="wizard-stepper" aria-label="Các bước đóng góp dữ liệu"></ol>
+            </div>
+            <div class="col-lg-9">
+              <form id="contribution-form" class="aniot-card wizard-card" novalidate>
+                <div id="wizard-status" class="wizard-status" aria-live="polite"></div>
+
+                <section class="wizard-step" data-step="0" aria-labelledby="step-dataset-title">
+                  <p class="section-kicker">Bước 1</p>
+                  <h3 id="step-dataset-title">Thông tin bộ dữ liệu</h3>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label" for="organization-name">Đơn vị đóng góp dữ liệu</label>
+                      <input id="organization-name" class="form-control" type="text" value="Ngân hàng Thịnh Vượng Demo" required>
+                      <div class="form-text">Dùng tên tổ chức giả lập hoặc tên hiển thị không nhạy cảm.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="dataset-name">Tên bộ dữ liệu</label>
+                      <input id="dataset-name" class="form-control" type="text" value="Bộ dữ liệu gihệ thống dịch thẻ thử nghiệm 2026" required>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="species">Phân khúc</label>
+                      <select id="species" class="form-select" required>
+                        <option value="">Chọn phân khúc</option>
+                        <option selected>Ngân hàng bán lẻ</option>
+                        <option>Tín dụng cá nhân</option>
+                        <option>Ngân hàng số</option>
+                        <option>Đầu tư &amp; chứng khoán</option>
+                        <option>Doanh nghiệp SME</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="period">Giai đoạn dữ liệu</label>
+                      <input id="period" class="form-control" type="text" value="01/2026-06/2026" placeholder="Ví dụ: 01/2026-06/2026" required>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="data-category">Nhóm dữ liệu</label>
+                      <input id="data-category" class="form-control" type="text" value="Môi trường, sức khỏe" required>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="dataset-purpose">Mục đích chia sẻ</label>
+                      <textarea id="dataset-purpose" class="form-control" rows="3" required>Minh họa cách dữ liệu cảm biến đơn vị nuôi có thể được chuẩn hóa để phục vụ bài toán nghiên cứu và cảnh báo thử nghiệm.</textarea>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="wizard-step" data-step="1" aria-labelledby="step-structure-title" hidden>
+                  <p class="section-kicker">Bước 2</p>
+                  <h3 id="step-structure-title">Cấu trúc dữ liệu</h3>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label" for="source-system">Hệ thống nguồn hiện có</label>
+                      <select id="source-system" class="form-select" required>
+                        <option value="">Chọn hệ thống</option>
+                        <option selected>Bảng xuất từ hệ thống cảm biến</option>
+                        <option>Core Banking / Data Warehouse</option>
+                        <option>Bảng tổng hợp nội bộ</option>
+                        <option>API nội bộ giả lập</option>
+                      </select>
+                      <div class="form-text">Aniot mô phỏng kết nối qua bản shệ thống dữ liệu, không yêu cầu thay đổi hệ thống nguồn.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="update-frequency">Tần suất cập nhật</label>
+                      <select id="update-frequency" class="form-select" required>
+                        <option value="">Chọn tần suất</option>
+                        <option selected>5 phút/lần với cảm biến môi trường</option>
+                        <option>Tổng hợp hằng ngày</option>
+                        <option>Tổng hợp theo khách hàng</option>
+                        <option>Theo đợt đóng góp dữ liệu</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="source-fields">Trường dữ liệu nguồn</label>
+                      <textarea id="source-fields" class="form-control code-textarea" rows="6" required>TEMP_01, HUM_01, CO2_01, NH3_01, FEED_KG, WATER_L, DEAD_QTY</textarea>
+                      <div class="form-text">Chỉ nhập tên trường minh họa, không nhập dữ liệu cá thể hoặc thông tin nhạy cảm.</div>
+                    </div>
+                    <div class="col-12">
+                      <div class="demo-note mb-0">
+                        <span aria-hidden="true">!</span>
+                        <div>
+                          <strong>Dữ liệu giả lập</strong>
+                          <span>Trang này không nhận tệp thật. Cấu trúc bên trên chỉ mô phỏng cách Aniot hiểu metadata và trường dữ liệu.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="wizard-step" data-step="2" aria-labelledby="step-mapping-title" hidden>
+                  <p class="section-kicker">Bước 3</p>
+                  <h3 id="step-mapping-title">Ánh xạ cấu trúc dữ liệu</h3>
+                  <p class="wizard-copy">Aniot giữ nguyên hệ thống nguồn và tạo lớp ánh xạ sang schema chuẩn để dữ liệu có thể được tìm kiếm, kiểm tra chất lượng và dùng cho nghiên cứu.</p>
+                  <div id="mapping-list" class="mapping-list"></div>
+                </section>
+
+                <section class="wizard-step" data-step="3" aria-labelledby="step-policy-title" hidden>
+                  <p class="section-kicker">Bước 4</p>
+                  <h3 id="step-policy-title">Chính sách truy cập</h3>
+                  <p class="wizard-copy">Chọn một mức truy cập cho bộ dữ liệu mô phỏng. Mô tả chính sách được lấy từ dữ liệu dùng chung của Aniot.</p>
+                  <fieldset class="access-policy-scale">
+                    <legend class="visually-hidden">Chọn chính sách truy cập</legend>
+                    <div id="access-policy-scale" aria-label="Thang mức truy cập dữ liệu"></div>
+                  </fieldset>
+                </section>
+
+                <section class="wizard-step" data-step="4" aria-labelledby="step-review-title" hidden>
+                  <p class="section-kicker">Bước 5</p>
+                  <h3 id="step-review-title">Xem lại đóng góp</h3>
+                  <p class="wizard-copy">Kiểm tra tóm tắt trước khi hoàn tất mô phỏng. Hành động cuối cùng chỉ tạo xác nhận cục bộ trên trang.</p>
+                  <div id="review-summary" class="review-summary"></div>
+                  <div id="completion-message" class="completion-message" aria-live="polite" hidden></div>
+                </section>
+
+                <div class="wizard-actions">
+                  <button id="back-button" class="btn btn-outline-secondary" type="button">Quay lại</button>
+                  <button id="next-button" class="btn btn-primary" type="button">Tiếp tục</button>
+                  <button id="complete-button" class="btn btn-primary" type="submit" hidden>Hoàn tất mô phỏng</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/demo-data.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/pages/contribute.js"></script>
+  </body>
+</html>

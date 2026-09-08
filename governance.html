@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quản trị dữ liệu | Aniot</title>
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="stylesheet" href="assets/css/pages/governance.css">
+  </head>
+  <body data-page="governance">
+    <div id="site-header"></div>
+
+    <main>
+      <section class="governance-hero">
+        <div class="container-xl">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-8">
+              <span class="badge aniot-badge mb-3">Prototype trình diễn</span>
+              <p class="section-kicker">Quản trị dữ liệu</p>
+              <h1 class="governance-title">Chia sẻ dữ liệu có kiểm soát, không công khai mặc định</h1>
+              <p class="governance-description">Aniot giúp ngân hàng và tổ chức tài chính đóng góp dữ liệu theo chính sách truy cập phù hợp, có xem xét mục đích sử dụng, mức ẩn danh và tuyến truy vết nguồn dữ liệu.</p>
+            </div>
+            <div class="col-lg-4">
+              <aside class="aniot-card steward-statement" aria-labelledby="steward-title">
+                <h2 id="steward-title">Tuyên bố vai trò dữ liệu</h2>
+                <div class="stewardship-diagram" aria-label="Aniot là đơn vị quản trị dữ liệu giữa bên đóng góp và cộng đồng nghiên cứu">
+                  <div class="steward-node contributor-node">
+                    <span class="steward-node-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M5 11h14M7 11v8M17 11v8M8 8l4-3 4 3M10 15h4" />
+                      </svg>
+                    </span>
+                    <span>Đơn vị đóng góp</span>
+                  </div>
+                  <div class="steward-link contributor-link" aria-hidden="true"></div>
+                  <div class="steward-node steward-hub">
+                    <span class="steward-node-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M12 4l7 4v5c0 4-3 6-7 7-4-1-7-3-7-7V8l7-4zM9 12h6M12 9v6" />
+                      </svg>
+                    </span>
+                    <span>Aniot quản trị</span>
+                  </div>
+                  <div class="steward-link researcher-link" aria-hidden="true"></div>
+                  <div class="steward-node researcher-node">
+                    <span class="steward-node-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M7 5h10v14H7zM9 8h6M9 12h6M9 16h3" />
+                      </svg>
+                    </span>
+                    <span>Nhà nghiên cứu</span>
+                  </div>
+                </div>
+                <p>Aniot xây dựng và vận hành hạ tầng nền tảng, đóng vai trò là đơn vị quản trị dữ liệu. Aniot không mặc định là chủ sở hữu của mọi bộ dữ liệu được đóng góp.</p>
+                <p>Quyền sử dụng dữ liệu phụ thuộc vào chính sách truy cập và thỏa thuận với đơn vị đóng góp dữ liệu.</p>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-section flow-section" aria-labelledby="flow-title">
+        <div class="container-xl">
+          <div class="section-heading">
+            <p class="section-kicker">Luồng quản trị</p>
+            <h2 id="flow-title" class="section-title">Từ đóng góp đến ghi nhận kết quả</h2>
+            <p class="section-description">Luồng dưới đây minh họa cách một bộ dữ liệu đi qua kiểm tra khái niệm trước khi được dùng cho nghiên cứu trong nguyên mẫu trình diễn.</p>
+          </div>
+          <ol class="governance-flow" aria-label="Luồng quản trị dữ liệu">
+            <li><span>Đóng góp</span><small>Mô tả bộ dữ liệu và nguồn dữ liệu</small></li>
+            <li><span>Rà soát</span><small>Kiểm tra mục đích và metadata</small></li>
+            <li><span>Chuẩn hóa</span><small>Ánh xạ cấu trúc dữ liệu</small></li>
+            <li><span>Chọn truy cập</span><small>Chọn chính sách phù hợp</small></li>
+            <li><span>Phê duyệt</span><small>Xem xét theo mục đích sử dụng</small></li>
+            <li><span>Nghiên cứu</span><small>Phân tích theo phạm vi được cấp</small></li>
+            <li><span>Ghi nhận kết quả</span><small>Liên kết kết quả về nguồn dữ liệu</small></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="site-section" aria-labelledby="policy-title">
+        <div class="container-xl">
+          <div class="section-heading">
+            <p class="section-kicker">Chính sách truy cập</p>
+            <h2 id="policy-title" class="section-title">Năm mức truy cập cho dữ liệu đóng góp</h2>
+            <p class="section-description">Các mức truy cập được lấy từ dữ liệu dùng chung của nguyên mẫu. Chọn một mức để xem cách Aniot mô phỏng quyền xem, phê duyệt, thông tin hiển thị và ghi nhận nguồn.</p>
+          </div>
+
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-5">
+              <div id="policy-tabs" class="policy-tabs" role="tablist" aria-label="Mức chính sách truy cập"></div>
+            </div>
+            <div class="col-lg-7">
+              <aside id="policy-detail" class="aniot-card policy-detail" aria-live="polite" aria-labelledby="policy-detail-title"></aside>
+            </div>
+          </div>
+          <div class="policy-matrix-wrap mt-4">
+            <h3 class="policy-matrix-title">Ma trận so sánh truy cập</h3>
+            <div id="policy-matrix" class="policy-matrix" aria-label="Ma trận so sánh mức truy cập dữ liệu"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-section council-section" aria-labelledby="council-title">
+        <div class="container-xl">
+          <div class="section-heading">
+            <p class="section-kicker">Hội đồng quản trị dữ liệu</p>
+            <h2 id="council-title" class="section-title">Vai trò tham gia trong mô hình quản trị</h2>
+            <p class="section-description">Các vai trò dưới đây là mô phỏng, không đại diện cho cá nhân thật. Mục tiêu là cho thấy quản trị dữ liệu cần tiếng nói từ vận hành, chuyên môn và đạo đức dữ liệu.</p>
+          </div>
+          <div id="council-roles" class="council-grid"></div>
+        </div>
+      </section>
+
+      <section class="site-section principles-section" aria-labelledby="principles-title">
+        <div class="container-xl">
+          <div class="section-heading">
+            <p class="section-kicker">Nguyên tắc</p>
+            <h2 id="principles-title" class="section-title">Nguyên tắc chia sẻ dữ liệu có trách nhiệm</h2>
+          </div>
+          <div id="principles-list" class="principles-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/demo-data.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/pages/governance.js"></script>
+  </body>
+</html>

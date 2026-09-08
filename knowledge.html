@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kho tri thức | Aniot</title>
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="stylesheet" href="assets/css/pages/knowledge.css">
+  </head>
+  <body data-page="knowledge">
+    <div id="site-header"></div>
+
+    <main>
+      <section class="knowledge-hero">
+        <div class="container-xl">
+          <nav class="detail-breadcrumb" aria-label="Đường dẫn">
+            <a href="index.html">Tổng quan</a>
+            <span aria-hidden="true">/</span>
+            <span>Kho tri thức</span>
+          </nav>
+
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-8">
+              <span class="badge aniot-badge mb-3">Prototype trình diễn</span>
+              <p class="section-kicker">Kho tri thức</p>
+              <h1 class="knowledge-title">Tri thức có thể truy vết về dữ liệu nguồn</h1>
+              <p class="knowledge-description">Trang này minh họa cách phát hiện, bằng chứng, mô hình và quan hệ tri thức được nối lại với bộ dữ liệu và bài toán nghiên cứu, thay vì dừng ở một báo cáo rời rạc.</p>
+            </div>
+            <div class="col-lg-4">
+              <aside class="aniot-card context-card" aria-labelledby="context-title">
+                <h2 id="context-title">Ngữ cảnh đang xem</h2>
+                <div id="context-panel">
+                  <p>Đang hiển thị toàn bộ tri thức giả lập trong nguyên mẫu trình diễn.</p>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-section provenance-section" aria-labelledby="provenance-title">
+        <div class="container-xl">
+          <div class="section-heading">
+            <p class="section-kicker">Dữ liệu → Tri thức</p>
+            <h2 id="provenance-title">Dòng truy vết từ dữ liệu đến tri thức</h2>
+          </div>
+          <ol class="knowledge-provenance" aria-label="Dòng truy vết tri thức">
+            <li><span>Bộ dữ liệu</span><small>Nguồn dữ liệu được quản lý</small></li>
+            <li><span>Bài toán nghiên cứu</span><small>Câu hỏi từ vận hành thực tế</small></li>
+            <li><span>Phân tích</span><small>Kiểm thử giả thuyết và mô hình</small></li>
+            <li><span>Phát hiện</span><small>Kết quả thận trọng, có giới hạn</small></li>
+            <li><span>Mô hình</span><small>Thử nghiệm có chỉ số mô phỏng</small></li>
+            <li><span>Tri thức</span><small>Quan hệ có thể tái sử dụng</small></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="site-section" aria-labelledby="findings-title">
+        <div class="container-xl">
+          <div class="results-toolbar">
+            <div>
+              <p class="section-kicker">Phát hiện giả lập</p>
+              <h2 id="findings-title" class="results-title">Phát hiện được liên kết với bằng chứng</h2>
+            </div>
+            <p id="knowledge-count" class="result-count" aria-live="polite"></p>
+          </div>
+          <div id="active-context" class="active-filter-list" aria-live="polite"></div>
+          <div id="findings-list" class="findings-list"></div>
+          <div id="knowledge-empty" class="aniot-card empty-state" hidden>
+            <h3>Chưa có tri thức phù hợp</h3>
+            <p>Ngữ cảnh này chưa có phát hiện, mô hình hoặc quan hệ tri thức trong dữ liệu giả lập của nguyên mẫu trình diễn.</p>
+            <a class="btn btn-outline-primary" href="knowledge.html">Xóa bộ lọc</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-section graph-section" aria-labelledby="graph-title">
+        <div class="container-xl">
+          <div class="section-heading">
+            <p class="section-kicker">Đồ thị tri thức</p>
+            <h2 id="graph-title">Quan hệ tri thức có thể kiểm tra nguồn</h2>
+            <p>Các quan hệ dưới đây dùng cách diễn đạt thận trọng như “có thể liên quan” và luôn giữ đường dẫn về bộ dữ liệu, bài toán nghiên cứu và mô hình liên quan.</p>
+          </div>
+
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-8">
+              <div id="knowledge-graph" class="aniot-card knowledge-graph" aria-label="Đồ thị tri thức giả lập"></div>
+            </div>
+            <div class="col-lg-4">
+              <aside class="aniot-card graph-detail-panel" aria-labelledby="graph-detail-title">
+                <p class="section-kicker mb-1">Chi tiết quan hệ</p>
+                <h3 id="graph-detail-title">Chọn một nút hoặc quan hệ</h3>
+                <div id="graph-detail-content">
+                  <p>Nhấn vào nút hoặc nhãn quan hệ trong đồ thị để xem bằng chứng, bộ dữ liệu nguồn, bài toán và mô hình liên quan.</p>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-section models-section" aria-labelledby="models-title">
+        <div class="container-xl">
+          <div class="section-heading">
+            <p class="section-kicker">Mô hình</p>
+            <h2 id="models-title">Mô hình thử nghiệm nối với phát hiện</h2>
+          </div>
+          <div id="models-list" class="models-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/demo-data.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/pages/knowledge.js"></script>
+  </body>
+</html>

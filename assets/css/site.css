@@ -1,0 +1,344 @@
+:root {
+  --aniot-jade-50: #F3FAF7;
+  --aniot-jade-100: #E5F5EE;
+  --aniot-jade-200: #CDEBDD;
+  --aniot-jade-300: #A8DEC7;
+  --aniot-jade-400: #72C7A4;
+  --aniot-jade-500: #35A77D;
+  --aniot-jade-600: #238768;
+  --aniot-jade-700: #1B6B55;
+  --aniot-jade-800: #175545;
+  --aniot-jade-900: #133F35;
+  --aniot-jade-950: #0B2B25;
+  --aniot-sage-50: #F7F9F8;
+  --aniot-sage-100: #EFF3F1;
+  --aniot-sage-200: #DDE5E1;
+  --aniot-sage-300: #C7D2CD;
+  --aniot-sage-400: #A5B5AE;
+  --aniot-sage-500: #81948B;
+  --aniot-sage-600: #64776F;
+  --aniot-sage-700: #4F5E58;
+  --aniot-sage-800: #3A4641;
+  --aniot-sage-900: #27312D;
+  --aniot-sage-950: #18201D;
+  --aniot-teal: #0F7C82;
+  --aniot-teal-soft: #E8F7F6;
+  --aniot-primary: var(--aniot-jade-700);
+  --aniot-primary-dark: var(--aniot-jade-800);
+  --aniot-secondary: var(--aniot-teal);
+  --aniot-accent: var(--aniot-teal);
+  --aniot-bg: var(--aniot-sage-50);
+  --aniot-surface: #ffffff;
+  --aniot-text: var(--aniot-sage-950);
+  --aniot-text-soft: var(--aniot-sage-800);
+  --aniot-muted: var(--aniot-sage-600);
+  --aniot-border: var(--aniot-sage-200);
+  --aniot-soft: var(--aniot-jade-50);
+  --aniot-soft-strong: var(--aniot-jade-100);
+  --aniot-subtle-border: var(--aniot-jade-200);
+  --aniot-warning-soft: #fff7e0;
+  --aniot-line: rgba(15, 124, 130, 0.08);
+  --aniot-shadow: 0 14px 34px rgba(24, 32, 29, 0.06);
+  --aniot-focus-ring: rgba(15, 124, 130, 0.45);
+  --aniot-focus-ring-soft: rgba(15, 124, 130, 0.16);
+  --aniot-focus-ring-subtle: rgba(15, 124, 130, 0.14);
+  --aniot-focus-ring-light: rgba(15, 124, 130, 0.24);
+  --bs-primary: var(--aniot-primary);
+  --bs-primary-rgb: 27, 107, 85;
+  --bs-link-color: var(--aniot-primary);
+  --bs-link-hover-color: var(--aniot-primary-dark);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--aniot-bg);
+  color: var(--aniot-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--aniot-primary);
+}
+
+a:hover {
+  color: var(--aniot-primary-dark);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--aniot-primary);
+  --bs-btn-border-color: var(--aniot-primary);
+  --bs-btn-hover-bg: var(--aniot-primary-dark);
+  --bs-btn-hover-border-color: var(--aniot-primary-dark);
+  --bs-btn-active-bg: var(--aniot-primary-dark);
+  --bs-btn-active-border-color: var(--aniot-primary-dark);
+  --bs-btn-focus-shadow-rgb: 27, 107, 85;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--aniot-primary);
+  --bs-btn-border-color: var(--aniot-primary);
+  --bs-btn-hover-bg: var(--aniot-primary);
+  --bs-btn-hover-border-color: var(--aniot-primary);
+  --bs-btn-active-bg: var(--aniot-primary-dark);
+  --bs-btn-active-border-color: var(--aniot-primary-dark);
+  --bs-btn-focus-shadow-rgb: 27, 107, 85;
+}
+
+.btn {
+  border-radius: 7px;
+  font-weight: 650;
+}
+
+.btn-outline-secondary {
+  --bs-btn-color: var(--aniot-sage-800);
+  --bs-btn-border-color: var(--aniot-sage-300);
+  --bs-btn-hover-bg: var(--aniot-sage-100);
+  --bs-btn-hover-border-color: var(--aniot-sage-400);
+  --bs-btn-hover-color: var(--aniot-text);
+  --bs-btn-focus-shadow-rgb: 15, 124, 130;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--aniot-border);
+  box-shadow: 0 1px 0 rgba(24, 32, 29, 0.02);
+  backdrop-filter: saturate(1.1) blur(12px);
+}
+
+.navbar-brand {
+  color: var(--aniot-primary-dark);
+  font-weight: 750;
+  letter-spacing: 0;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: var(--aniot-primary);
+}
+
+.navbar-toggler {
+  border-color: var(--aniot-border);
+}
+
+.nav-link {
+  color: var(--aniot-text-soft);
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  color: var(--aniot-primary-dark);
+}
+
+.nav-link.active {
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  .nav-link.active::after {
+    background: var(--aniot-accent);
+    border-radius: 999px;
+    bottom: 0.25rem;
+    content: "";
+    height: 0.18rem;
+    left: 0.5rem;
+    position: absolute;
+    right: 0.5rem;
+  }
+}
+
+.site-section {
+  padding: 3.5rem 0;
+}
+
+.datasets-hero,
+.challenges-hero,
+.dataset-detail-hero,
+.dataset-safe-state,
+.challenge-detail-hero,
+.challenge-safe-state,
+.knowledge-hero,
+.contribute-hero,
+.governance-hero {
+  background:
+    linear-gradient(135deg, rgba(243, 250, 247, 0.96), rgba(247, 249, 248, 0.84)),
+    linear-gradient(90deg, var(--aniot-line) 1px, transparent 1px),
+    linear-gradient(180deg, var(--aniot-line) 1px, transparent 1px);
+  background-size: auto, 42px 42px, 42px 42px;
+  border-bottom: 1px solid var(--aniot-border);
+}
+
+.section-kicker {
+  color: var(--aniot-secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: var(--aniot-text);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+  text-wrap: balance;
+}
+
+.section-description {
+  color: var(--aniot-muted);
+  margin-bottom: 0;
+  max-width: 62rem;
+}
+
+.aniot-card {
+  background: var(--aniot-surface);
+  border: 1px solid var(--aniot-border);
+  border-radius: 8px;
+  box-shadow: var(--aniot-shadow);
+}
+
+.aniot-card,
+.btn,
+.nav-link {
+  transition: background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
+}
+
+.aniot-badge {
+  background: var(--aniot-soft);
+  border: 1px solid var(--aniot-subtle-border);
+  color: var(--aniot-primary-dark);
+  font-weight: 600;
+}
+
+.demo-badge {
+  color: var(--aniot-secondary) !important;
+  font-weight: 700;
+}
+
+.demo-note {
+  align-items: flex-start;
+  background: var(--aniot-warning-soft);
+  border: 1px solid #f3dfa4;
+  border-radius: 8px;
+  color: #5c470a;
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+}
+
+.demo-note strong {
+  display: block;
+}
+
+.table-responsive {
+  background: var(--aniot-surface);
+}
+
+.table {
+  --bs-table-bg: var(--aniot-surface);
+  --bs-table-striped-bg: var(--aniot-sage-50);
+  --bs-table-hover-bg: var(--aniot-jade-50);
+}
+
+.table thead th {
+  background: var(--aniot-jade-50);
+  border-bottom-color: var(--aniot-sage-300);
+}
+
+.form-control,
+.form-select {
+  border-radius: 7px;
+}
+
+.form-control::placeholder {
+  color: var(--aniot-sage-500);
+}
+
+.metadata-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+}
+
+.metadata-item {
+  border-bottom: 1px solid var(--aniot-border);
+  padding-bottom: 0.85rem;
+}
+
+.metadata-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.metadata-label {
+  color: var(--aniot-muted);
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.15rem;
+}
+
+.metadata-value {
+  color: var(--aniot-text);
+  font-weight: 650;
+}
+
+.site-footer {
+  background: var(--aniot-sage-950);
+  color: var(--aniot-sage-100);
+  padding: 2.5rem 0;
+}
+
+.footer-title,
+.footer-links-title {
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.footer-description {
+  color: var(--aniot-sage-300);
+  max-width: 42rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
+.footer-links a {
+  color: var(--aniot-sage-100);
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 3px solid var(--aniot-focus-ring);
+  outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .site-section {
+    padding: 4.5rem 0;
+  }
+}

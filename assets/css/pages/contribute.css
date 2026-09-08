@@ -1,0 +1,434 @@
+.contribute-hero {
+  padding: 3rem 0;
+}
+
+.contribute-title {
+  color: var(--aniot-text);
+  font-weight: 750;
+  letter-spacing: 0;
+  line-height: 1.14;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+}
+
+.contribute-description {
+  color: var(--aniot-text-soft);
+  font-size: 1.06rem;
+  margin-bottom: 0;
+  max-width: 56rem;
+}
+
+.stewardship-card {
+  padding: 1.25rem;
+}
+
+.stewardship-card h2 {
+  color: var(--aniot-secondary);
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.stewardship-card p {
+  color: var(--aniot-muted);
+}
+
+.stewardship-card p:last-child {
+  margin-bottom: 0;
+}
+
+.contribution-workspace {
+  background: var(--aniot-bg);
+}
+
+.wizard-stepper {
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wizard-stepper li {
+  align-items: center;
+  background: var(--aniot-surface);
+  border: 1px solid var(--aniot-border);
+  border-radius: 8px;
+  color: var(--aniot-muted);
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem;
+}
+
+.wizard-stepper li.is-active {
+  border-color: var(--aniot-secondary);
+  color: var(--aniot-text);
+  box-shadow: inset 0 0 0 1px var(--aniot-secondary);
+}
+
+.wizard-stepper li.is-complete {
+  background: var(--aniot-soft);
+  border-color: var(--aniot-subtle-border);
+  color: var(--aniot-primary-dark);
+}
+
+.step-number {
+  align-items: center;
+  background: var(--aniot-secondary);
+  border-radius: 999px;
+  color: #ffffff;
+  display: inline-flex;
+  flex: 0 0 1.85rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  height: 1.85rem;
+  justify-content: center;
+  width: 1.85rem;
+}
+
+.step-icon {
+  align-items: center;
+  background: var(--aniot-soft);
+  border: 1px solid var(--aniot-subtle-border);
+  border-radius: 999px;
+  color: var(--aniot-secondary);
+  display: inline-flex;
+  flex: 0 0 2rem;
+  height: 2rem;
+  justify-content: center;
+  width: 2rem;
+}
+
+.step-icon svg {
+  display: block;
+  height: 1.05rem;
+  width: 1.05rem;
+}
+
+.step-label {
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.wizard-card {
+  padding: 1rem;
+}
+
+.wizard-step h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.wizard-copy {
+  color: var(--aniot-muted);
+  margin-bottom: 1rem;
+}
+
+.wizard-status {
+  color: #8a5a00;
+  font-weight: 650;
+  margin-bottom: 1rem;
+  min-height: 1.5rem;
+}
+
+.wizard-status:empty {
+  margin-bottom: 0;
+  min-height: 0;
+}
+
+.form-label {
+  color: var(--aniot-text);
+  font-weight: 650;
+}
+
+.form-control,
+.form-select {
+  border-color: var(--aniot-border);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--aniot-accent);
+  box-shadow: 0 0 0 0.2rem var(--aniot-focus-ring-soft);
+}
+
+.code-textarea,
+.schema-code {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+}
+
+.mapping-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.mapping-row {
+  align-items: stretch;
+  background: linear-gradient(90deg, var(--aniot-surface) 0, var(--aniot-surface) 48%, var(--aniot-soft) 48%, var(--aniot-soft) 100%);
+  border: 1px solid var(--aniot-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: 1fr;
+  padding: 0.9rem;
+}
+
+.review-item {
+  background: var(--aniot-surface);
+}
+
+.mapping-field,
+.mapping-schema {
+  background: var(--aniot-surface);
+  border: 1px solid var(--aniot-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.7rem;
+}
+
+.mapping-field {
+  border-left: 4px solid var(--aniot-sage-300);
+}
+
+.mapping-schema {
+  border-left: 4px solid var(--aniot-secondary);
+}
+
+.mapping-label {
+  color: var(--aniot-muted);
+  display: block;
+  font-size: 0.82rem;
+  margin-bottom: 0.15rem;
+}
+
+.mapping-value {
+  color: var(--aniot-text);
+  display: block;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.mapping-role {
+  color: var(--aniot-muted);
+  display: block;
+  font-size: 0.82rem;
+}
+
+.mapping-arrow {
+  align-self: center;
+  color: var(--aniot-secondary);
+  display: inline-flex;
+  font-weight: 700;
+  justify-self: center;
+}
+
+.mapping-arrow svg {
+  display: block;
+  height: 1.5rem;
+  transform: rotate(90deg);
+  width: 4rem;
+}
+
+.mapping-explanation {
+  color: var(--aniot-muted);
+  margin-bottom: 0;
+}
+
+.access-policy-scale {
+  background: var(--aniot-surface);
+  border: 1px solid var(--aniot-border);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 0.9rem;
+}
+
+.access-scale-note {
+  color: var(--aniot-muted);
+  margin-bottom: 0.8rem;
+}
+
+.access-scale-list {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.access-scale-card {
+  align-items: start;
+  background: var(--aniot-surface);
+  border: 1px solid var(--aniot-border);
+  border-radius: 8px;
+  color: var(--aniot-text);
+  display: grid;
+  gap: 0.15rem 0.65rem;
+  grid-template-columns: auto minmax(0, 1fr);
+  min-height: 100%;
+  padding: 0.7rem;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.access-scale-card:hover {
+  border-color: var(--aniot-accent);
+  cursor: pointer;
+}
+
+.access-scale-input {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.access-scale-input:focus-visible + .access-scale-marker {
+  outline: 3px solid var(--aniot-focus-ring-light);
+  outline-offset: 2px;
+}
+
+.access-scale-marker {
+  align-items: center;
+  background: var(--aniot-sage-100);
+  border: 1px solid var(--aniot-border);
+  border-radius: 999px;
+  color: var(--aniot-muted);
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 750;
+  grid-row: span 2;
+  height: 1.75rem;
+  justify-content: center;
+  width: 1.75rem;
+}
+
+.access-scale-label {
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.access-scale-description {
+  color: var(--aniot-muted);
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.access-scale-selected {
+  color: var(--aniot-primary-dark);
+  display: none;
+  font-size: 0.78rem;
+  font-weight: 750;
+  grid-column: 1 / -1;
+  margin-top: 0.15rem;
+}
+
+.access-scale-card:has(.access-scale-input:checked) {
+  background: var(--aniot-soft);
+  border-color: var(--aniot-secondary);
+  box-shadow: inset 0 0 0 1px var(--aniot-secondary);
+}
+
+.access-scale-card:has(.access-scale-input:checked) .access-scale-marker {
+  background: var(--aniot-secondary);
+  border-color: var(--aniot-secondary);
+  color: #ffffff;
+}
+
+.access-scale-card:has(.access-scale-input:checked) .access-scale-selected {
+  display: block;
+}
+
+.review-summary {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+
+.review-item {
+  border-top: 1px solid var(--aniot-border);
+  padding-top: 0.75rem;
+}
+
+.review-label {
+  color: var(--aniot-muted);
+  display: block;
+  font-size: 0.84rem;
+  margin-bottom: 0.1rem;
+}
+
+.review-value {
+  color: var(--aniot-text);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.completion-message {
+  background: var(--aniot-soft);
+  border: 1px solid var(--aniot-subtle-border);
+  border-radius: 8px;
+  color: var(--aniot-primary-dark);
+  font-weight: 650;
+  margin-top: 1rem;
+  padding: 0.9rem;
+}
+
+.wizard-actions {
+  align-items: center;
+  border-top: 1px solid var(--aniot-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+}
+
+@media (min-width: 576px) {
+  .review-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .contribute-hero {
+    padding: 4rem 0 3.5rem;
+  }
+
+  .contribute-title {
+    font-size: 2.65rem;
+  }
+
+  .wizard-card {
+    padding: 1.25rem;
+  }
+
+  .mapping-row {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.35fr);
+  }
+
+  .mapping-arrow svg {
+    transform: none;
+  }
+
+  .access-scale-card {
+    grid-template-columns: 1fr;
+  }
+
+  .access-scale-marker {
+    grid-row: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .wizard-stepper {
+    position: sticky;
+    top: 5rem;
+  }
+}

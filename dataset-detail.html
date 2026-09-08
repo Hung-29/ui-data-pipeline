@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chi tiết bộ dữ liệu | Aniot</title>
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="stylesheet" href="assets/css/pages/dataset-detail.css">
+  </head>
+  <body data-page="datasets">
+    <div id="site-header"></div>
+
+    <main>
+      <section id="dataset-not-found" class="site-section dataset-safe-state" hidden>
+        <div class="container-xl">
+          <div class="aniot-card safe-state-card">
+            <span class="badge aniot-badge mb-3">Chi tiết bộ dữ liệu</span>
+            <h1>Không tìm thấy bộ dữ liệu</h1>
+            <p>Liên kết này thiếu mã bộ dữ liệu hoặc mã không có trong dữ liệu giả lập của nguyên mẫu trình diễn.</p>
+            <a class="btn btn-primary" href="datasets.html">Quay lại khám phá dữ liệu</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="dataset-detail-view" hidden>
+        <section class="dataset-detail-hero">
+          <div class="container-xl">
+            <nav class="detail-breadcrumb" aria-label="Đường dẫn">
+              <a href="datasets.html">Khám phá dữ liệu</a>
+              <span aria-hidden="true">/</span>
+              <span>Chi tiết bộ dữ liệu</span>
+            </nav>
+
+            <div class="row g-4 align-items-start">
+              <div class="col-lg-8">
+                <div id="dataset-badges" class="d-flex flex-wrap gap-2 mb-3" aria-label="Nhãn bộ dữ liệu"></div>
+                <p class="section-kicker">Chi tiết bộ dữ liệu</p>
+                <h1 id="dataset-title" class="dataset-detail-title"></h1>
+                <p id="dataset-summary" class="dataset-detail-description"></p>
+              </div>
+              <div class="col-lg-4">
+                <div class="aniot-card detail-side-card">
+                  <p class="side-card-title">Bộ dữ liệu được quản trị</p>
+                  <p class="side-card-copy">Trang này trình bày siêu dữ liệu, cấu trúc, chất lượng, phiên bản, nguồn gốc và liên kết nghiên cứu thay vì chỉ mô phỏng một tệp dữ liệu rời.</p>
+                  <div class="asset-stack" aria-label="Các lớp quản trị của bộ dữ liệu">
+                    <div class="asset-stack-item">
+                      <span class="asset-stack-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M6 5h12v14H6z"/><path d="M9 9h6"/><path d="M9 13h4"/></svg>
+                      </span>
+                      <span>Siêu dữ liệu</span>
+                    </div>
+                    <div class="asset-stack-item">
+                      <span class="asset-stack-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M5 6h14"/><path d="M5 12h14"/><path d="M5 18h14"/><path d="M9 6v12"/></svg>
+                      </span>
+                      <span>Từ điển dữ liệu</span>
+                    </div>
+                    <div class="asset-stack-item">
+                      <span class="asset-stack-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="m5 13 4 4L19 7"/><path d="M6 7h7"/></svg>
+                      </span>
+                      <span>Chất lượng dữ liệu</span>
+                    </div>
+                    <div class="asset-stack-item">
+                      <span class="asset-stack-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M7 7h10v10H7z"/><path d="M4 11h3"/><path d="M17 11h3"/><path d="M12 4v3"/><path d="M12 17v3"/></svg>
+                      </span>
+                      <span>Phiên bản</span>
+                    </div>
+                    <div class="asset-stack-item">
+                      <span class="asset-stack-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M6 7h4"/><path d="M14 7h4"/><path d="M10 7c0 2.8 4 2.8 4 5s-4 2.2-4 5"/><path d="M6 17h4"/><path d="M14 17h4"/></svg>
+                      </span>
+                      <span>Nguồn gốc dữ liệu</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="site-section dataset-detail-body">
+          <div class="container-xl">
+            <div id="dataset-metadata" class="metadata-summary-grid mb-4"></div>
+
+            <div class="detail-tabs-shell aniot-card">
+              <ul class="nav nav-pills detail-tabs" id="dataset-detail-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="overview-tab" data-bs-toggle="pill" data-bs-target="#overview-panel" type="button" role="tab" aria-controls="overview-panel" aria-selected="true">Tổng quan</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="dictionary-tab" data-bs-toggle="pill" data-bs-target="#dictionary-panel" type="button" role="tab" aria-controls="dictionary-panel" aria-selected="false">Từ điển dữ liệu</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="sample-tab" data-bs-toggle="pill" data-bs-target="#sample-panel" type="button" role="tab" aria-controls="sample-panel" aria-selected="false">Dữ liệu mẫu</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="quality-tab" data-bs-toggle="pill" data-bs-target="#quality-panel" type="button" role="tab" aria-controls="quality-panel" aria-selected="false">Chất lượng dữ liệu</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="versions-tab" data-bs-toggle="pill" data-bs-target="#versions-panel" type="button" role="tab" aria-controls="versions-panel" aria-selected="false">Phiên bản</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="lineage-tab" data-bs-toggle="pill" data-bs-target="#lineage-panel" type="button" role="tab" aria-controls="lineage-panel" aria-selected="false">Nguồn gốc và luồng xử lý dữ liệu</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="research-tab" data-bs-toggle="pill" data-bs-target="#research-panel" type="button" role="tab" aria-controls="research-panel" aria-selected="false">Nghiên cứu liên quan</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="access-tab" data-bs-toggle="pill" data-bs-target="#access-panel" type="button" role="tab" aria-controls="access-panel" aria-selected="false">Chính sách truy cập</button>
+                </li>
+              </ul>
+
+              <div class="tab-content detail-tab-content" id="dataset-detail-tab-content">
+                <section class="tab-pane fade show active" id="overview-panel" role="tabpanel" aria-labelledby="overview-tab" tabindex="0"></section>
+                <section class="tab-pane fade" id="dictionary-panel" role="tabpanel" aria-labelledby="dictionary-tab" tabindex="0"></section>
+                <section class="tab-pane fade" id="sample-panel" role="tabpanel" aria-labelledby="sample-tab" tabindex="0"></section>
+                <section class="tab-pane fade" id="quality-panel" role="tabpanel" aria-labelledby="quality-tab" tabindex="0"></section>
+                <section class="tab-pane fade" id="versions-panel" role="tabpanel" aria-labelledby="versions-tab" tabindex="0"></section>
+                <section class="tab-pane fade" id="lineage-panel" role="tabpanel" aria-labelledby="lineage-tab" tabindex="0"></section>
+                <section class="tab-pane fade" id="research-panel" role="tabpanel" aria-labelledby="research-tab" tabindex="0"></section>
+                <section class="tab-pane fade" id="access-panel" role="tabpanel" aria-labelledby="access-tab" tabindex="0"></section>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/demo-data.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/pages/dataset-detail.js"></script>
+  </body>
+</html>

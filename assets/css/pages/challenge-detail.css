@@ -1,0 +1,384 @@
+.challenge-detail-hero {
+  padding: 3rem 0;
+}
+
+.detail-breadcrumb {
+  align-items: center;
+  color: var(--aniot-muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.92rem;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-breadcrumb a {
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.detail-breadcrumb a:hover,
+.detail-breadcrumb a:focus {
+  text-decoration: underline;
+}
+
+.challenge-detail-title {
+  color: var(--aniot-text);
+  font-weight: 750;
+  letter-spacing: 0;
+  line-height: 1.14;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+}
+
+.challenge-detail-description {
+  color: var(--aniot-text-soft);
+  font-size: 1.06rem;
+  margin-bottom: 0;
+  max-width: 56rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.detail-side-card,
+.safe-state-card {
+  padding: 1.25rem;
+}
+
+.safe-state-card {
+  margin: 0 auto;
+  max-width: 44rem;
+  text-align: center;
+}
+
+.safe-state-card h1 {
+  font-weight: 750;
+  margin-bottom: 0.75rem;
+}
+
+.safe-state-card p {
+  color: var(--aniot-muted);
+  margin: 0 auto 1.25rem;
+  max-width: 34rem;
+}
+
+.side-card-title {
+  color: var(--aniot-secondary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.side-card-copy {
+  color: var(--aniot-muted);
+  margin-bottom: 0;
+}
+
+.challenge-flow-diagram {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.challenge-flow-node {
+  align-items: center;
+  background: var(--aniot-sage-50);
+  border: 1px solid var(--aniot-border);
+  border-radius: 8px;
+  color: var(--aniot-text);
+  display: flex;
+  gap: 0.65rem;
+  padding: 0.62rem 0.7rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.challenge-flow-node:hover,
+.challenge-flow-node:focus {
+  border-color: var(--aniot-subtle-border);
+  color: var(--aniot-primary-dark);
+  text-decoration: none;
+}
+
+.challenge-flow-node:not(:last-child)::after {
+  align-items: center;
+  background: var(--aniot-bg);
+  border: 1px solid var(--aniot-border);
+  border-radius: 999px;
+  bottom: -0.98rem;
+  color: var(--aniot-secondary);
+  content: "↓";
+  display: inline-flex;
+  font-size: 0.85rem;
+  font-weight: 750;
+  height: 1.35rem;
+  justify-content: center;
+  left: 1.34rem;
+  position: absolute;
+  width: 1.35rem;
+  z-index: 1;
+}
+
+.challenge-flow-icon {
+  align-items: center;
+  background: var(--aniot-soft);
+  border: 1px solid var(--aniot-subtle-border);
+  border-radius: 999px;
+  color: var(--aniot-primary-dark);
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 1.95rem;
+  justify-content: center;
+  width: 1.95rem;
+}
+
+.challenge-flow-icon svg {
+  fill: none;
+  height: 1.08rem;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  width: 1.08rem;
+}
+
+.challenge-flow-text {
+  display: grid;
+  gap: 0.05rem;
+  min-width: 0;
+}
+
+.challenge-flow-label {
+  color: var(--aniot-muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.challenge-flow-value {
+  color: var(--aniot-text);
+  font-size: 0.92rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.challenge-detail-body {
+  padding-top: 2.5rem;
+}
+
+.metadata-summary-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.summary-card {
+  padding: 1rem;
+}
+
+.summary-label {
+  color: var(--aniot-muted);
+  display: block;
+  font-size: 0.84rem;
+  margin-bottom: 0.16rem;
+}
+
+.summary-value {
+  color: var(--aniot-text);
+  font-weight: 700;
+}
+
+.summary-value a {
+  text-decoration: none;
+}
+
+.summary-value a:hover,
+.summary-value a:focus {
+  text-decoration: underline;
+}
+
+.detail-panel {
+  height: 100%;
+  padding: 1rem;
+}
+
+.detail-panel h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.detail-panel h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.panel-copy,
+.detail-panel li {
+  color: var(--aniot-muted);
+}
+
+.detail-panel ul,
+.detail-panel ol {
+  margin-bottom: 0;
+}
+
+.detail-info-card {
+  border: 1px solid var(--aniot-border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.detail-info-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.detail-info-card p,
+.detail-info-card li {
+  color: var(--aniot-muted);
+}
+
+.detail-info-card p:last-child,
+.detail-info-card ul:last-child {
+  margin-bottom: 0;
+}
+
+.dataset-used-card,
+.knowledge-card {
+  border: 1px solid var(--aniot-border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.dataset-used-card p,
+.knowledge-card p {
+  color: var(--aniot-muted);
+}
+
+.dataset-used-card p:last-child,
+.knowledge-card p:last-child {
+  margin-bottom: 0;
+}
+
+.leaderboard-heading {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.table-responsive {
+  border: 1px solid var(--aniot-border);
+  border-radius: 8px;
+}
+
+.leaderboard-table {
+  margin-bottom: 0;
+}
+
+.leaderboard-table th {
+  color: var(--aniot-text);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.leaderboard-table td {
+  color: var(--aniot-text-soft);
+  vertical-align: middle;
+}
+
+.rank-pill {
+  align-items: center;
+  background: var(--aniot-soft);
+  border: 1px solid var(--aniot-subtle-border);
+  border-radius: 999px;
+  color: var(--aniot-primary-dark);
+  display: inline-flex;
+  font-weight: 700;
+  height: 2rem;
+  justify-content: center;
+  min-width: 2rem;
+  padding: 0 0.45rem;
+}
+
+.metric-bar-cell {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 9rem;
+}
+
+.metric-bar-label {
+  color: var(--aniot-text-soft);
+  font-weight: 650;
+}
+
+.metric-bar-track {
+  background: var(--aniot-sage-200);
+  border-radius: 999px;
+  display: block;
+  height: 0.5rem;
+  overflow: hidden;
+}
+
+.metric-bar-track span {
+  background: var(--aniot-accent);
+  display: block;
+  height: 100%;
+}
+
+.validation-status,
+.form-status {
+  border-radius: 8px;
+  color: var(--aniot-primary-dark);
+  font-weight: 650;
+  margin-bottom: 1rem;
+}
+
+.validation-status:not(:empty),
+.form-status:not(:empty) {
+  background: var(--aniot-soft);
+  border: 1px solid var(--aniot-subtle-border);
+  padding: 0.75rem;
+}
+
+.modal-helper {
+  color: var(--aniot-muted);
+}
+
+@media (min-width: 576px) {
+  .metadata-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .challenge-detail-hero {
+    padding: 4rem 0 3.5rem;
+  }
+
+  .challenge-detail-title {
+    font-size: 2.55rem;
+  }
+
+  .detail-panel {
+    padding: 1.25rem;
+  }
+
+  .leaderboard-heading {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 992px) {
+  .metadata-summary-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

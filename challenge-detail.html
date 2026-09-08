@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chi tiết bài toán nghiên cứu | Aniot</title>
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="stylesheet" href="assets/css/pages/challenge-detail.css">
+  </head>
+  <body data-page="challenges">
+    <div id="site-header"></div>
+
+    <main>
+      <section id="challenge-not-found" class="site-section challenge-safe-state" hidden>
+        <div class="container-xl">
+          <div class="aniot-card safe-state-card">
+            <span class="badge aniot-badge mb-3">Chi tiết bài toán nghiên cứu</span>
+            <h1>Không tìm thấy bài toán nghiên cứu</h1>
+            <p>Liên kết này thiếu mã bài toán hoặc mã không có trong dữ liệu giả lập của nguyên mẫu trình diễn.</p>
+            <a class="btn btn-primary" href="challenges.html">Quay lại danh sách nghiên cứu</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="challenge-detail-view" hidden>
+        <section class="challenge-detail-hero">
+          <div class="container-xl">
+            <nav class="detail-breadcrumb" aria-label="Đường dẫn">
+              <a href="challenges.html">Nghiên cứu</a>
+              <span aria-hidden="true">/</span>
+              <span>Chi tiết bài toán nghiên cứu</span>
+            </nav>
+
+            <div class="row g-4 align-items-start">
+              <div class="col-lg-8">
+                <div id="challenge-badges" class="d-flex flex-wrap gap-2 mb-3" aria-label="Nhãn bài toán"></div>
+                <p class="section-kicker">Chi tiết bài toán nghiên cứu</p>
+                <h1 id="challenge-title" class="challenge-detail-title"></h1>
+                <p id="challenge-summary" class="challenge-detail-description"></p>
+                <div class="hero-actions mt-4">
+                  <button id="join-challenge-button" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#joinChallengeModal">Tham gia bài toán</button>
+                  <a id="hero-dataset-link" class="btn btn-outline-primary" href="datasets.html">Xem bộ dữ liệu</a>
+                  <a id="hero-knowledge-link" class="btn btn-outline-secondary" href="knowledge.html" hidden>Khám phá tri thức</a>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="aniot-card detail-side-card">
+                  <p class="side-card-title">Từ bài toán đến tri thức</p>
+                  <p class="side-card-copy">Trang này mô phỏng cách một vấn đề thực tế được gắn với bộ dữ liệu, tiêu chí đánh giá, nhóm nghiên cứu và tri thức liên quan.</p>
+                  <div id="challenge-flow-diagram" class="challenge-flow-diagram" aria-label="Luồng từ bài toán đến tri thức"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="site-section challenge-detail-body">
+          <div class="container-xl">
+            <div id="challenge-metadata" class="metadata-summary-grid mb-4"></div>
+
+            <div class="row g-4">
+              <div class="col-lg-7">
+                <section class="aniot-card detail-panel" aria-labelledby="problem-title">
+                  <h2 id="problem-title">Mô tả bài toán</h2>
+                  <p id="problem-description" class="panel-copy"></p>
+                  <div id="research-questions"></div>
+                </section>
+              </div>
+
+              <div class="col-lg-5">
+                <section class="aniot-card detail-panel" aria-labelledby="dataset-section-title">
+                  <h2 id="dataset-section-title">Bộ dữ liệu sử dụng</h2>
+                  <div id="challenge-datasets"></div>
+                </section>
+              </div>
+
+              <div class="col-lg-6">
+                <section class="aniot-card detail-panel" aria-labelledby="evaluation-title">
+                  <h2 id="evaluation-title">Cách đánh giá</h2>
+                  <p class="panel-copy">Tiêu chí bên dưới là mô phỏng để minh họa cách Aniot có thể đánh giá kết quả gửi lên trong nguyên mẫu trình diễn.</p>
+                  <div id="evaluation-criteria"></div>
+                </section>
+              </div>
+
+              <div class="col-lg-6">
+                <section class="aniot-card detail-panel" aria-labelledby="participant-title">
+                  <h2 id="participant-title">Nhóm tham gia</h2>
+                  <div id="participant-summary"></div>
+                </section>
+              </div>
+
+              <div class="col-12">
+                <section class="aniot-card detail-panel" aria-labelledby="leaderboard-title">
+                  <div class="leaderboard-heading">
+                    <div>
+                      <p class="section-kicker mb-1">Bảng xếp hạng giả lập</p>
+                      <h2 id="leaderboard-title">Kết quả gửi lên minh họa</h2>
+                    </div>
+                    <button id="validate-result-button" class="btn btn-outline-primary" type="button">Kiểm tra kết quả thử nghiệm</button>
+                  </div>
+                  <p class="panel-copy">Tất cả điểm số và chỉ số trong bảng là dữ liệu giả lập, không phải kết quả nghiên cứu thực tế.</p>
+                  <div id="validation-status" class="validation-status" aria-live="polite"></div>
+                  <div id="leaderboard-table"></div>
+                </section>
+              </div>
+
+              <div class="col-12">
+                <section class="aniot-card detail-panel" aria-labelledby="knowledge-title">
+                  <h2 id="knowledge-title">Liên kết kho tri thức</h2>
+                  <div id="knowledge-links"></div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <div class="modal fade" id="joinChallengeModal" tabindex="-1" aria-labelledby="joinChallengeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <form id="join-challenge-form" novalidate>
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="joinChallengeModalLabel">Tham gia bài toán nghiên cứu</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+            </div>
+            <div class="modal-body">
+              <p class="modal-helper">Biểu mẫu này chỉ mô phỏng đăng ký tham gia trong nguyên mẫu trình diễn, không gửi dữ liệu tới máy chủ.</p>
+              <div class="mb-3">
+                <label class="form-label" for="team-name">Tên nhóm nghiên cứu</label>
+                <input id="team-name" class="form-control" type="text" autocomplete="organization" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="research-focus">Hướng tiếp cận dự kiến</label>
+                <textarea id="research-focus" class="form-control" rows="3" required></textarea>
+              </div>
+              <div id="join-form-status" class="form-status" aria-live="polite"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Đóng</button>
+              <button type="submit" class="btn btn-primary">Gửi đăng ký mô phỏng</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/demo-data.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/pages/challenge-detail.js"></script>
+  </body>
+</html>

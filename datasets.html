@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Khám phá dữ liệu | Aniot</title>
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="stylesheet" href="assets/css/pages/datasets.css">
+  </head>
+  <body data-page="datasets">
+    <div id="site-header"></div>
+
+    <main>
+      <section class="datasets-hero">
+        <div class="container-xl">
+          <div class="row g-4 align-items-end">
+            <div class="col-lg-8">
+              <div class="d-flex flex-wrap gap-2 mb-3" aria-label="Nhãn prototype">
+                <span class="badge aniot-badge">Prototype trình diễn</span>
+                <span class="badge text-bg-light border demo-badge">Dữ liệu giả lập</span>
+              </div>
+              <p class="section-kicker">Danh mục dữ liệu</p>
+              <h1 class="datasets-title">Khám phá dữ liệu tài chính - ngân hàng dùng cho nghiên cứu</h1>
+              <p class="datasets-description">Tìm bộ dữ liệu theo phân khúc, nhóm dữ liệu và chính sách truy cập. Mỗi bộ dữ liệu giữ liên kết tới đơn vị đóng góp, chất lượng dữ liệu minh họa và trang chi tiết qua ID ổn định.</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="demo-note">
+                <span aria-hidden="true">ⓘ</span>
+                <div>
+                  <strong>Số liệu minh họa, không phải kết quả nghiên cứu thực tế</strong>
+                  <span>Các bộ dữ liệu bên dưới được dùng để trình diễn luồng Dữ liệu → Nghiên cứu → Tri thức.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-section datasets-browser">
+        <div class="container-xl">
+          <div class="row g-4 align-items-start">
+            <aside class="col-lg-3">
+              <form id="dataset-filters" class="filter-panel aniot-card" aria-label="Bộ lọc dữ liệu">
+                <div class="mb-3">
+                  <label class="form-label" for="dataset-search">Tìm kiếm bộ dữ liệu</label>
+                  <input id="dataset-search" class="form-control" type="search" autocomplete="off" placeholder="Tên, mô tả hoặc đơn vị đóng góp">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label" for="species-filter">Phân khúc</label>
+                  <select id="species-filter" class="form-select">
+                    <option value="">Tất cả phân khúc</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label" for="category-filter">Nhóm dữ liệu</label>
+                  <select id="category-filter" class="form-select">
+                    <option value="">Tất cả nhóm dữ liệu</option>
+                  </select>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label" for="access-filter">Chính sách truy cập</label>
+                  <select id="access-filter" class="form-select">
+                    <option value="">Tất cả chính sách</option>
+                  </select>
+                </div>
+
+                <button id="clear-filters" class="btn btn-outline-secondary w-100" type="button">Xóa bộ lọc</button>
+              </form>
+            </aside>
+
+            <section class="col-lg-9" aria-labelledby="dataset-results-title">
+              <div class="results-toolbar">
+                <div>
+                  <p class="section-kicker mb-1">Khám phá dữ liệu</p>
+                  <h2 id="dataset-results-title" class="results-title">Danh sách bộ dữ liệu</h2>
+                </div>
+                <p id="result-count" class="result-count" aria-live="polite"></p>
+              </div>
+
+              <div id="active-filter-list" class="active-filter-list" aria-live="polite"></div>
+              <div id="dataset-results" class="dataset-results"></div>
+              <div id="dataset-empty-state" class="empty-state aniot-card" hidden>
+                <h3>Không tìm thấy bộ dữ liệu phù hợp</h3>
+                <p>Thử thay đổi từ khóa hoặc xóa bộ lọc để xem lại toàn bộ danh mục dữ liệu giả lập.</p>
+                <button id="empty-clear-filters" class="btn btn-outline-primary" type="button">Xóa bộ lọc</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/demo-data.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/pages/datasets.js"></script>
+  </body>
+</html>

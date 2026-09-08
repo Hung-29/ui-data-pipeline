@@ -1,0 +1,11 @@
+{
+  "name": "aniot-financial-banking-miniapp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aniot Financial Data Commons - MiniApp-ready prototype for Codex/Sites",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/dev.mjs dist"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Aniot Financial Data Commons",
+  "slug": "aniot-financial-banking",
+  "entry": "index.html",
+  "locale": "vi-VN",
+  "category": "finance-banking",
+  "description": "Prototype dữ liệu, nghiên cứu và tri thức cho lĩnh vực tài chính - ngân hàng.",
+  "runtime": "web",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
+}
